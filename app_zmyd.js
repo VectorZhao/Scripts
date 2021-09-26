@@ -6,36 +6,36 @@ const notify = $.isNode() ? require('./sendNotify') : '';
 //===================请自行抓包配置以下信息
 
 //签到请求体(在https://open.zuimeiread.com/welfare/sign-center/里面)
-const sign_center_body=``
+const sign_center_body=`48ED90C11CA86196C22F1FE14B08D9AF`
 
 //打开淘宝、支付宝、京东、步步赞链接(在https://open.zuimeiread.com/welfare/finish-welfare/里面)
 //淘宝请求体
-const finish_tb_body=``
+const finish_tb_body=`{"product":"1","ver":"1.0.6","marketChannel":"oppo","sign":"D70C89626191684E08E9C4C914CFF701","sysVer":"11","token":"6d5ae0f37268e27740a12d27dba2c3db","appId":"1","osType":"2","p_type":"OnePlus","time":"1632624536","invite_code":"","packageName":"com.zuimei.wxy","udid":"1e5c6de7-0950-39bc-8070-853514a97b59"}`
 //支付宝请求体
-const finish_zfb_body=``
+const finish_zfb_body=`{"product":"1","ver":"1.0.6","marketChannel":"oppo","sign":"E7B207B95CB8C0442CEFBA3CC88A5B9B","sysVer":"11","token":"6d5ae0f37268e27740a12d27dba2c3db","appId":"1","welfare_id":"53","osType":"2","p_type":"OnePlus","time":"1632623909","invite_code":"","packageName":"com.zuimei.wxy","udid":"1e5c6de7-0950-39bc-8070-853514a97b59"}`
 //京东请求体
-const finish_jd_body=``
+const finish_jd_body=`{"product":"1","ver":"1.0.6","marketChannel":"oppo","sign":"BE4FFE3805A169B8F59102885218DA46","sysVer":"11","token":"6d5ae0f37268e27740a12d27dba2c3db","appId":"1","welfare_id":"54","osType":"2","p_type":"OnePlus","time":"1632623850","invite_code":"","packageName":"com.zuimei.wxy","udid":"1e5c6de7-0950-39bc-8070-853514a97b59"}`
 //步步攒
 const finish_bbz_body=``
 
 //分享app请求体(在https://open.zuimeiread.com/user/share-reward/里面)
-const share_app_body=``
+const share_app_body=`{"product":"1","ver":"1.0.6","marketChannel":"oppo","sign":"A9C389256CE5DE1A9F68EB6A6BCBD849","sysVer":"11","token":"6d5ae0f37268e27740a12d27dba2c3db","appId":"1","osType":"2","p_type":"OnePlus","time":"1632624622","invite_code":"","packageName":"com.zuimei.wxy","udid":"1e5c6de7-0950-39bc-8070-853514a97b59"}`
 
 //观看广告请求体(在https://open.zuimeiread.com/advert/video-callback/链接里面)
-const advert_body=``
+const advert_body=`{"product":"1","ver":"1.0.6","marketChannel":"oppo","sign":"8079D74872A9AA7A89175E1CC11A591F","sysVer":"11","type":"welfare-task","token":"6d5ae0f37268e27740a12d27dba2c3db","appId":"1","osType":"2","p_type":"OnePlus","time":"1632625392","invite_code":"","packageName":"com.zuimei.wxy","udid":"1e5c6de7-0950-39bc-8070-853514a97b59"}`
 
 //刷阅读金币请求体(在https://open.zuimeiread.com/welfare/timing-reward/里面)
-const timing_reward_body=``
+const timing_reward_body=`{"product":"1","ver":"1.0.6","marketChannel":"oppo","sign":"D4BB8B43AB2764A9A708CA6EE0DE25F8","sysVer":"11","cycles":"0","token":"6d5ae0f37268e27740a12d27dba2c3db","appId":"1","osType":"2","p_type":"OnePlus","time":"1632625481","invite_code":"","packageName":"com.zuimei.wxy","udid":"1e5c6de7-0950-39bc-8070-853514a97b59"}`
 
 //刷阅读时长请求体(在https://open.zuimeiread.com/welfare/up-read-time/里面)
-const up_read_body=``
+const up_read_body=`{"product":"1","ver":"1.0.6","marketChannel":"oppo","sign":"A851BBE9E226CE397EB1E20A9F4BDCD7","sysVer":"11","token":"6d5ae0f37268e27740a12d27dba2c3db","read_time":"40","appId":"1","osType":"2","p_type":"OnePlus","time":"1632625522","invite_code":"","packageName":"com.zuimei.wxy","udid":"1e5c6de7-0950-39bc-8070-853514a97b59"}`
 
 //幸运转盘链接(链接中有wheel-result)
-const result=``
+const result=`https://page.zuimeiread.com/welfare/wheel-result?token=6d5ae0f37268e27740a12d27dba2c3db`
 //幸运转盘cookie
-const cookie=``
+const cookie=`_csrf-frontend=637f3aa8eed095bc277f47b3a26118c2aa04fa529c76ca8dc7fab4803d4241fba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%222nQ1vTe5RE-WZKc183iSr0BTnWXNJVpi%22%3B%7D`
 //幸运转盘请求头x-csrf-token
-const csrf_token=``
+const csrf_token=`DWgrh16qAkvDC3HPmXROZGgRqnfcYfnHx5w1y619Kjs_Bnq2KP5nfpFOXJjDPy1VUCLDJK5Ru5Opy22F5ytaUg==`
 
 
 !(async () => {
