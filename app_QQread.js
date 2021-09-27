@@ -111,7 +111,7 @@ console.log(`-------- 共 ${ywguid.length} 个账号 --------`)
             YD_ywkey=ywkey[i]
             YD_qrsn=qrsn[i]
             //通用协议头
-            YD_headers=JSON.parse(`{"Host": "eventv36.reader.qq.com","user-agent": "Mozilla/5.0 (Linux; Android 10; SKW-A0 Build/SKYW2103030CN00MQ5; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/81.0.4044.138 Mobile Safari/537.36V1_AND_SQ_5.0.1 QQReader","cookie":"ywguid=${YD_ywguid};ywkey=${YD_ywkey};qrsn=${YD_qrsn}"}`)
+            YD_headers=JSON.parse(`{"Host": "eventv36.reader.qq.com","user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148QQReader","cookie":"ywguid=${YD_ywguid};ywkey=${YD_ywkey};qrsn=${YD_qrsn}"}`)
             //通用ck
             YD_cookie=`"cookie":"ywguid=${YD_ywguid};ywkey=${YD_ywkey};qrsn=${YD_qrsn}"`
             
@@ -320,7 +320,7 @@ function YD_l5() {
     return new Promise((resolve, reject) => {
         $.get({
             url : `https://eventv36.reader.qq.com/activity/pkg11955/readBookWatchVideo?targetTime=5`,
-            headers : JSON.parse(`{"Host": "eventv36.reader.qq.com","user-agent": "Mozilla/5.0 (Linux; Android 10; SKW-A0 Build/SKYW2103030CN00MQ5; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/81.0.4044.138 Mobile Safari/537.36V1_AND_SQ_5.0.1 QQReader","cookie":"ywguid=${YD_ywguid};ywkey=${YD_ywkey};qrsn=${YD_qrsn};trustedid=99A489185A9D4A74A17587232DA137761","referer":"https://yuedu.reader.qq.com/common/common/wealCollection/earn.html"}`),
+            headers : JSON.parse(`{"Host": "eventv36.reader.qq.com","user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148QQReader","cookie":"ywguid=${YD_ywguid};ywkey=${YD_ywkey};qrsn=${YD_qrsn};trustedid=99A489185A9D4A74A17587232DA137761","referer":"https://yuedu.reader.qq.com/common/common/wealCollection/earn.html"}`),
         }, async(error, response, data) => {
            //console.log(data) 
             let result = JSON.parse(data)
@@ -339,7 +339,7 @@ function YD_l30() {
     return new Promise((resolve, reject) => {
         $.get({
             url : `https://eventv36.reader.qq.com/activity/pkg11955/readBookWatchVideo?targetTime=30`,
-            headers : JSON.parse(`{"Host": "eventv36.reader.qq.com","user-agent": "Mozilla/5.0 (Linux; Android 10; SKW-A0 Build/SKYW2103030CN00MQ5; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/81.0.4044.138 Mobile Safari/537.36V16_AND_SQ_5.0.1 QQReader","cookie":"ywguid=${YD_ywguid};ywkey=${YD_ywkey};qrsn=${YD_qrsn}","referer":"https://yuedu.reader.qq.com/common/common/wealCollection/earn.html"}`),
+            headers : JSON.parse(`{"Host": "eventv36.reader.qq.com","user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148QQReader","cookie":"ywguid=${YD_ywguid};ywkey=${YD_ywkey};qrsn=${YD_qrsn}","referer":"https://yuedu.reader.qq.com/common/common/wealCollection/earn.html"}`),
         }, async(error, response, data) => {
            //console.log(data) 
             let result = JSON.parse(data)
@@ -358,7 +358,7 @@ function YD_l60() {
     return new Promise((resolve, reject) => {
         $.get({
             url : `https://eventv36.reader.qq.com/activity/pkg11955/readBookWatchVideo?targetTime=60`,
-            headers : JSON.parse(`{"Host": "eventv36.reader.qq.com","user-agent": "Mozilla/5.0 (Linux; Android 10; SKW-A0 Build/SKYW2103030CN00MQ5; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/81.0.4044.138 Mobile Safari/537.36V1_AND_SQ_5.0.1 QQReader","cookie":"ywguid=${YD_ywguid};ywkey=${YD_ywkey};qrsn=${YD_qrsn};trustedid=99A489185A9D4A74A17587232DA137761","referer":"https://yuedu.reader.qq.com/common/common/wealCollection/earn.html"}`),
+            headers : JSON.parse(`{"Host": "eventv36.reader.qq.com","user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148QQReader","cookie":"ywguid=${YD_ywguid};ywkey=${YD_ywkey};qrsn=${YD_qrsn};trustedid=99A489185A9D4A74A17587232DA137761","referer":"https://yuedu.reader.qq.com/common/common/wealCollection/earn.html"}`),
         }, async(error, response, data) => {
            //console.log(data) 
             let result = JSON.parse(data)
@@ -377,7 +377,7 @@ function YD_l120() {
     return new Promise((resolve, reject) => {
         $.get({
             url : `https://eventv36.reader.qq.com/activity/pkg11955/readBookWatchVideo?targetTime=120`,
-            headers : JSON.parse(`{"Host": "eventv36.reader.qq.com","user-agent": "Mozilla/5.0 (Linux; Android 10; SKW-A0 Build/SKYW2103030CN00MQ5; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/81.0.4044.138 Mobile Safari/537.36V1_AND_SQ_5.0.1 QQReader","cookie":"ywguid=${YD_ywguid};ywkey=${YD_ywkey};qrsn=${YD_qrsn};trustedid=99A489185A9D4A74A17587232DA137761","referer":"https://yuedu.reader.qq.com/common/common/wealCollection/earn.html"}`),
+            headers : JSON.parse(`{"Host": "eventv36.reader.qq.com","user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148QQReader","cookie":"ywguid=${YD_ywguid};ywkey=${YD_ywkey};qrsn=${YD_qrsn};trustedid=99A489185A9D4A74A17587232DA137761","referer":"https://yuedu.reader.qq.com/common/common/wealCollection/earn.html"}`),
         }, async(error, response, data) => {
            //console.log(data) 
             let result = JSON.parse(data)
