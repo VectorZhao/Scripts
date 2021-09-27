@@ -6,11 +6,11 @@ const notify = $.isNode() ? require('./sendNotify') : '';
 //===================请自行抓包配置以下信息
 
 //签到请求体(在https://open.zuimeiread.com/welfare/sign-center/里面)
-const sign_center_body=`48ED90C11CA86196C22F1FE14B08D9AF`
+const sign_center_body=`{"product":"1","ver":"1.0.6","marketChannel":"oppo","sign":"751BBCBF126A4A86282ECE9778F43B28","sysVer":"11","token":"6d5ae0f37268e27740a12d27dba2c3db","appId":"1","osType":"2","p_type":"OnePlus","time":"1632708430","invite_code":"","packageName":"com.zuimei.wxy","udid":"1e5c6de7-0950-39bc-8070-853514a97b59"}`
 
 //打开淘宝、支付宝、京东、步步赞链接(在https://open.zuimeiread.com/welfare/finish-welfare/里面)
 //淘宝请求体
-const finish_tb_body=`{"product":"1","ver":"1.0.6","marketChannel":"oppo","sign":"D70C89626191684E08E9C4C914CFF701","sysVer":"11","token":"6d5ae0f37268e27740a12d27dba2c3db","appId":"1","osType":"2","p_type":"OnePlus","time":"1632624536","invite_code":"","packageName":"com.zuimei.wxy","udid":"1e5c6de7-0950-39bc-8070-853514a97b59"}`
+const finish_tb_body=`{"product":"1","ver":"1.0.6","marketChannel":"oppo","sign":"5339148CBB685D72451ADD2BBCA6C1F0","sysVer":"11","token":"6d5ae0f37268e27740a12d27dba2c3db","appId":"1","welfare_id":"64","osType":"2","p_type":"OnePlus","time":"1632708141","invite_code":"","packageName":"com.zuimei.wxy","udid":"1e5c6de7-0950-39bc-8070-853514a97b59"}`
 //支付宝请求体
 const finish_zfb_body=`{"product":"1","ver":"1.0.6","marketChannel":"oppo","sign":"E7B207B95CB8C0442CEFBA3CC88A5B9B","sysVer":"11","token":"6d5ae0f37268e27740a12d27dba2c3db","appId":"1","welfare_id":"53","osType":"2","p_type":"OnePlus","time":"1632623909","invite_code":"","packageName":"com.zuimei.wxy","udid":"1e5c6de7-0950-39bc-8070-853514a97b59"}`
 //京东请求体
