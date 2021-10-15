@@ -1,31 +1,22 @@
 /*
-
-
-
+软件名称:微信_金银手指
+项目注册地址(微信扫码):https://gitee.com/soy-tool/app-script/raw/master/picture/wx_jysz.png
+(偷别人的,没有就拉下这个脚本)需要依赖 crypto-js.js ，文件地址：https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/crypto-js.js
+变量抓取:
 打开小黄鸟抓包,微信进金银手指界面 找有http://apponlie.sahaj.cn的连接
 点进去他的请求头中token 和 User-Agent
-
 必要变量:
 soy_wx_jysz_token
-
 可选变量
 soy_wx_jysz_User_Agent
-
 多个token用 @ 或 # 或 换行 隔开
-
 v2p配置如下：
-
 【REWRITE】
 匹配链接（正则表达式） http://apponlie.sahaj.cn/user/myInfo
-
 对应重写目标   wx_jysz.js
-
 【MITM】  
 apponlie.sahaj.cn
-
-
 cron 0 8-22/1 * * *
-
 */
 
 
@@ -209,7 +200,7 @@ function soy_jysz_fetchTask() {
                     let key = CryptoJS.enc.Utf8.parse("5kosc7jy2w0fxx3s")
                     let plaintText = `{"taskId":${taskId}}`
                     let jm = CryptoJS.AES.encrypt(plaintText, key, {mode: CryptoJS.mode.ECB,padding: CryptoJS.pad.Pkcs7})
-                    await $.wait(Math.floor(Math.random()*(12000-8000+1000)+8000))
+                    await $.wait(Math.floor(Math.random()*(15000-10000+1000)+10000))
                     await soy_jysz_task(jm)
                     
                 } 
@@ -263,13 +254,13 @@ function soy_jysz_task(data) {
     })
 }
 
-/*
-function soy_jysz_TX(txbody) {
+
+function soy_jysz_TX(body) {
     return new Promise((resolve, reject) => {
         $.post({
             url : `http://apponlie.sahaj.cn/task/completeTask`,
             headers : {"Accept": "application/json","Content-Type": "application/json;charset=UTF-8","Host": "apponlie.sahaj.cn","Origin": "http://jjuuii.sahaj.cn","Referer": "http://jjuuii.sahaj.cn","token": soy_wx_jysz_token,"User-Agent": soy_wx_jysz_User_Agent,"X-Requested-With": "com.tencent.mm"},
-            body : `${txbody}`,
+            body : `${body}`,
         }, async(error, response, data) => {
             //console.log(data)
             let result = JSON.parse(data)
@@ -283,41 +274,7 @@ function soy_jysz_TX(txbody) {
         })
     })
 }
-*/
 
-async function soy_jysz_TX(txbody) {
-  return new Promise((resolve) => {
-    let tx_url = {
-      url: `http://apponlie.sahaj.cn/user/pickAuto`,
-      headers: {
-        "Content-Type": "application/json;charset=UTF-8",
-        "Host": "apponlie.sahaj.cn",
-        "Origin": "http://dd.e-zine.top",
-        "Referer": "http://dd.e-zine.top",
-        "token": soy_wx_jysz_token,
-        "User-Agent": soy_wx_jysz_User_Agent
-      },
-      body: `${txbody}`,
-
-    }
-    $.post(tx_url, async (error, response, data) => {
-      try {
-        const result = JSON.parse(data)
-        //console.log(data)
-        if (result.code == 0) {
-          console.log(`\n【${$.name}---账号 ${$.index} 提现】: 提现 ${txgold} 元成功`)
-        } else {
-            console.log(`\n【${$.name}---账号 ${$.index} 提现】: ${result.msg}`)
-        }
-
-      } catch (e) {
-        //$.logErr(e, response);
-      } finally {
-        resolve();
-      }
-    })
-  })
-}
 
 
 async function soy_jysz_TX_state() {
@@ -332,16 +289,14 @@ async function soy_jysz_TX_state() {
             if(result.code==0){
                 gold=result.data.goldNow
                 if (gold >= 4000){
-                    /*if(gold>=1.2/0.4*4000){
+                    if(gold>=1.2/0.4*4000){
                     txgold=1.2
                 }else if(gold>=0.8/0.4*4000){
                     txgold=0.8
                 }else{
                     txgold=0.4
-                }*/
-                   txgold = Math.floor(gold/4000)*0.4
-                   txgold = txgold.toFixed(1)
-                    const CryptoJS = require('./crypto-js')
+                }
+                    
                     let key = CryptoJS.enc.Utf8.parse("5kosc7jy2w0fxx3s")
                     let plaintText = `{"moneyPick":${txgold}}`
                     let jm = CryptoJS.AES.encrypt(plaintText, key, {mode: CryptoJS.mode.ECB,padding: CryptoJS.pad.Pkcs7})
